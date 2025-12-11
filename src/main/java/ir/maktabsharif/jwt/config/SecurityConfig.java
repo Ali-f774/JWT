@@ -65,7 +65,7 @@ public class SecurityConfig {
 
         UserDetails admin = User.withUsername("admin")
                 .password(encoder.encode("adminpass"))
-                .roles("ADMIN", "USER") // Can have multiple roles
+                .roles("ADMIN", "USER")
                 .build();
         return new InMemoryUserDetailsManager(user,admin);
     }
